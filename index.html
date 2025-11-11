@@ -1,0 +1,4261 @@
+[file name]: deepseek_html_20251111_363c31.html
+[file content begin]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoology Nexus | UG & PG Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --primary-color: #4a8fb9;
+            --secondary-color: #6bb39b;
+            --accent-color: #f39c12;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Dark Mode Variables - Enhanced for better visibility */
+        [data-theme="dark"] {
+            --primary-color: #6bb6e0;
+            --secondary-color: #8cd4b5;
+            --accent-color: #ffb347;
+            --light-color: #121212;
+            --dark-color: #f8f9fa;
+            --text-color: #f0f0f0;
+            --card-bg: #1e1e1e;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            transition: var(--transition);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #3a7ca5;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #5aa389;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .section-title {
+            color: #6bb6e0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            transition: var(--transition);
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="dark"] .card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] header {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        [data-theme="dark"] .feature-card p {
+            color: #e0e0e0;
+        }
+
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .course-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            z-index: 1;
+        }
+
+        .course-card-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            color: white;
+            width: 100%;
+        }
+
+        .course-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            display: none;
+        }
+
+        .quiz-section.active {
+            display: block;
+        }
+
+        .quiz-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .quiz-tab {
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] .quiz-tab {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quiz-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .quiz-card {
+            position: relative;
+        }
+
+        .quiz-price {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .quiz-card h3 {
+            margin-bottom: 10px;
+        }
+
+        [data-theme="dark"] .quiz-card p {
+            color: #e0e0e0;
+        }
+
+        .quiz-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        [data-theme="dark"] .quiz-meta {
+            color: #b0b0b0;
+        }
+
+        /* Leaderboard Section */
+        .leaderboard-section {
+            display: none;
+        }
+
+        .leaderboard-section.active {
+            display: block;
+        }
+
+        .leaderboard-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .leaderboard-tab {
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] .leaderboard-tab {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .leaderboard-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .leaderboard-table th,
+        .leaderboard-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] .leaderboard-table th,
+        [data-theme="dark"] .leaderboard-table td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .leaderboard-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .leaderboard-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .leaderboard-table tr:hover {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        [data-theme="dark"] .leaderboard-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .rank {
+            font-weight: bold;
+            text-align: center;
+            width: 60px;
+        }
+
+        .rank-1 {
+            color: gold;
+            font-size: 1.2rem;
+        }
+
+        .rank-2 {
+            color: silver;
+            font-size: 1.1rem;
+        }
+
+        .rank-3 {
+            color: #cd7f32; /* bronze */
+            font-size: 1.1rem;
+        }
+
+        .score {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .score {
+            color: #6bb6e0;
+        }
+
+        .date {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        [data-theme="dark"] .date {
+            color: #b0b0b0;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+
+        [data-theme="dark"] .no-data {
+            color: #b0b0b0;
+        }
+
+        /* Quiz Page Styles */
+        .quiz-page {
+            display: none;
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+
+        .quiz-page.active {
+            display: block;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] .quiz-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quiz-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .quiz-title {
+            color: #6bb6e0;
+        }
+
+        .quiz-info {
+            display: flex;
+            gap: 20px;
+            font-size: 1.1rem;
+        }
+
+        .quiz-timer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .quiz-progress-container {
+            margin-bottom: 30px;
+        }
+
+        .quiz-progress-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .quiz-progress-bar {
+            background-color: #2d3748;
+        }
+
+        .quiz-progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .quiz-body {
+            display: flex;
+            gap: 30px;
+        }
+
+        .question-sidebar {
+            flex: 0 0 250px;
+        }
+
+        .question-navigation {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .question-nav-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        [data-theme="dark"] .question-nav-title {
+            color: #6bb6e0;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .question-number {
+            background-color: #2d3748;
+            color: #e2e8f0;
+        }
+
+        .question-number:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .question-number.current {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 0 3px rgba(74, 143, 185, 0.3);
+        }
+
+        .question-number.answered {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .question-number.skipped {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .question-status {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        [data-theme="dark"] .status-item {
+            color: #e0e0e0;
+        }
+
+        .status-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .status-current {
+            background-color: var(--primary-color);
+        }
+
+        .status-answered {
+            background-color: var(--secondary-color);
+        }
+
+        .status-skipped {
+            background-color: var(--accent-color);
+        }
+
+        .status-not-visited {
+            background-color: #e9ecef;
+        }
+
+        [data-theme="dark"] .status-not-visited {
+            background-color: #2d3748;
+        }
+
+        .question-content {
+            flex: 1;
+        }
+
+        .question-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .question-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .option {
+            background-color: #2d3748;
+            border-color: #4a5568;
+            color: #e0e0e0;
+        }
+
+        .option:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(74, 143, 185, 0.05);
+            transform: translateX(8px) scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] .option:hover {
+            background-color: rgba(74, 143, 185, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .option:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .option:hover:before {
+            left: 100%;
+        }
+
+        .option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(74, 143, 185, 0.1);
+            transform: translateX(8px);
+        }
+
+        [data-theme="dark"] .option.selected {
+            background-color: rgba(74, 143, 185, 0.3);
+        }
+
+        .option.correct {
+            border-color: var(--secondary-color);
+            background-color: rgba(107, 179, 155, 0.1);
+        }
+
+        [data-theme="dark"] .option.correct {
+            background-color: rgba(107, 179, 155, 0.3);
+        }
+
+        .option.incorrect {
+            border-color: #e74c3c;
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+
+        [data-theme="dark"] .option.incorrect {
+            background-color: rgba(231, 76, 60, 0.3);
+        }
+
+        .option-label {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            font-weight: 600;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        [data-theme="dark"] .option-label {
+            background-color: #4a5568;
+            color: #e2e8f0;
+        }
+
+        .option.selected .option-label {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .option.correct .option-label {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .option.incorrect .option-label {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .question-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        /* Quiz Review Section */
+        .quiz-review {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .quiz-review.active {
+            display: block;
+        }
+
+        .review-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        [data-theme="dark"] .review-title {
+            color: #6bb6e0;
+        }
+
+        .review-question {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+            box-shadow: var(--box-shadow);
+        }
+
+        .review-question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .review-question-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .review-question-number {
+            color: #6bb6e0;
+        }
+
+        .review-question-status {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .review-question-status.correct {
+            background-color: rgba(107, 179, 155, 0.2);
+            color: var(--secondary-color);
+        }
+
+        .review-question-status.incorrect {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+        }
+
+        .review-question-status.skipped {
+            background-color: rgba(243, 156, 18, 0.2);
+            color: var(--accent-color);
+        }
+
+        .review-question-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .review-options {
+            margin-bottom: 15px;
+        }
+
+        .review-explanation {
+            padding: 15px;
+            background-color: rgba(74, 143, 185, 0.1);
+            border-radius: var(--border-radius);
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        [data-theme="dark"] .review-explanation {
+            background-color: rgba(74, 143, 185, 0.2);
+            color: #e2e8f0;
+        }
+
+        .quiz-summary {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            display: none;
+        }
+
+        .summary-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .summary-title {
+            color: #6bb6e0;
+        }
+
+        .quiz-score {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+
+        [data-theme="dark"] .quiz-score {
+            color: #6bb6e0;
+        }
+
+        .quiz-percentage {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .score-breakdown {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .score-item {
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: #f8f9fa;
+        }
+
+        [data-theme="dark"] .score-item {
+            background-color: #2d3748;
+        }
+
+        .score-count {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .score-correct .score-count {
+            color: var(--secondary-color);
+        }
+
+        .score-incorrect .score-count {
+            color: #e74c3c;
+        }
+
+        .score-skipped .score-count {
+            color: var(--accent-color);
+        }
+
+        .summary-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        [data-theme="dark"] footer {
+            background-color: #1a1a1a;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6c757d;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .form-control {
+            border-color: #4a5568;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 143, 185, 0.25);
+        }
+
+        /* Admin Panel */
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .admin-sidebar {
+            width: 250px;
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+        }
+
+        [data-theme="dark"] .admin-sidebar {
+            background-color: #1a1a1a;
+        }
+
+        .admin-sidebar h2 {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .admin-nav li {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .admin-nav li:hover, .admin-nav li.active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-nav i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .admin-main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        [data-theme="dark"] .admin-main {
+            background-color: var(--light-color);
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        [data-theme="dark"] .admin-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Admin Quiz Management */
+        .quiz-management {
+            display: none;
+        }
+
+        .quiz-management.active {
+            display: block;
+        }
+
+        .quiz-form {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+        }
+
+        .quiz-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .question-form {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .remove-question {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .option-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .option-row input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .add-question-btn, .add-option-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .quiz-list {
+            margin-top: 30px;
+        }
+
+        .quiz-item {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quiz-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .edit-quiz, .delete-quiz {
+            padding: 5px 10px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .edit-quiz {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .delete-quiz {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        /* Enhanced Mobile Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--card-bg);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 80px;
+                transition: var(--transition);
+                z-index: 999;
+                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: left;
+                padding: 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 15px 25px;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            [data-theme="dark"] .nav-links a {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .mobile-menu {
+                display: block;
+                z-index: 1000;
+            }
+
+            .mobile-menu.active i:before {
+                content: "\f00d";
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .quiz-body {
+                flex-direction: column;
+            }
+            
+            .question-sidebar {
+                flex: 1;
+                order: 2;
+            }
+            
+            .question-content {
+                order: 1;
+            }
+
+            .leaderboard-table th,
+            .leaderboard-table td {
+                padding: 10px 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .logo span {
+                font-size: 1.2rem;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .hero-btns .btn {
+                width: 100%;
+                max-width: 280px;
+                padding: 14px 20px;
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-card {
+                padding: 25px 20px;
+            }
+            
+            .feature-card i {
+                font-size: 2.5rem;
+            }
+            
+            .feature-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .course-card {
+                height: 180px;
+            }
+            
+            .course-card-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .quiz-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .quiz-card {
+                padding: 20px;
+            }
+            
+            .quiz-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .quiz-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .quiz-info {
+                justify-content: center;
+            }
+            
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .question-number {
+                width: 38px;
+                height: 38px;
+            }
+            
+            .question-card {
+                padding: 25px 20px;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+            
+            .option {
+                padding: 14px 18px;
+            }
+            
+            .option-label {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+            
+            .question-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .question-actions .btn {
+                width: 100%;
+                padding: 14px;
+                font-size: 1rem;
+            }
+            
+            .score-breakdown {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .score-count {
+                font-size: 2rem;
+            }
+            
+            .summary-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .summary-actions .btn {
+                width: 100%;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-column h3 {
+                font-size: 1.2rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 25px 20px;
+            }
+            
+            .admin-container {
+                flex-direction: column;
+            }
+
+            .admin-sidebar {
+                width: 100%;
+            }
+
+            .leaderboard-tabs {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .leaderboard-tab {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+                padding: 12px 15px;
+            }
+            
+            .leaderboard-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .question-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .question-number {
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+            }
+            
+            .quiz-title {
+                font-size: 1.5rem;
+            }
+            
+            .question-text {
+                font-size: 1.1rem;
+            }
+            
+            .quiz-tabs {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .quiz-tab {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+                padding: 12px 15px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+
+            .leaderboard-table th,
+            .leaderboard-table td {
+                padding: 8px 5px;
+                font-size: 0.85rem;
+            }
+            
+            .rank {
+                width: 40px;
+            }
+        }
+
+        /* Mobile-specific improvements */
+        @media (max-width: 768px) {
+            .btn, .quiz-tab, .option, .question-number, .leaderboard-tab {
+                min-height: 44px;
+            }
+            
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            button:focus, .btn:focus, .option:focus {
+                outline: 2px solid var(--primary-color);
+                outline-offset: 2px;
+            }
+            
+            .quiz-body, .question-navigation, .question-content {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        /* Dark mode specific fixes */
+        [data-theme="dark"] .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        [data-theme="dark"] .course-card:before {
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        }
+
+        /* Fix for dark mode text visibility */
+        [data-theme="dark"] .card p {
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .quiz-feedback {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="#" class="logo" id="home-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Zoology Nexus</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-section="courses">Courses</a></li>
+                    <li><a href="#" class="nav-link" data-section="questions">Important Questions</a></li>
+                    <li><a href="#" class="nav-link" data-section="assignments">Assignments</a></li>
+                    <li><a href="#" class="nav-link" data-section="quiz">Quiz</a></li>
+                    <li><a href="#" class="nav-link" data-section="leaderboard">Leaderboard</a></li>
+                    <li><a href="#" class="nav-link" data-section="results">Results</a></li>
+                    <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn" id="loginBtn">Login</button>
+                    <div class="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section active-section">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Advance Your Zoology Knowledge</h1>
+                    <p>Comprehensive learning resources for Undergraduate and Postgraduate Zoology students. Access courses, quizzes, assignments, and more.</p>
+                    <div class="hero-btns">
+                        <a href="#" class="btn nav-link" data-section="courses">Explore Courses</a>
+                        <a href="#" class="btn btn-secondary nav-link" data-section="quiz">Take a Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Zoology Nexus?</h2>
+                <div class="features-grid">
+                    <div class="card feature-card fade-in">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Comprehensive Courses</h3>
+                        <p>Covering all major topics in Zoology for UG and PG students with detailed study materials.</p>
+                    </div>
+                    <div class="card feature-card fade-in">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Important Questions</h3>
+                        <p>Curated collection of exam-focused questions to help you prepare effectively.</p>
+                    </div>
+                    <div class="card feature-card fade-in">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Assignments</h3>
+                        <p>Download and submit assignments to test your knowledge and track progress.</p>
+                    </div>
+                    <div class="card feature-card fade-in">
+                        <i class="fas fa-brain"></i>
+                        <h3>Interactive Quizzes</h3>
+                        <p>Test your knowledge with our free and premium quizzes with instant results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Preview -->
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Popular Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="course-card-content">
+                            <h3>Animal Diversity</h3>
+                            <p>UG Level • 12 Modules</p>
+                        </div>
+                    </div>
+                    <div class="course-card" style="background-image: url('https://images.unsplash.com/photo-1530026405186-1f621e6a4e28?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="course-card-content">
+                            <h3>Cell Biology</h3>
+                            <p>UG & PG Level • 8 Modules</p>
+                        </div>
+                    </div>
+                    <div class="course-card" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="course-card-content">
+                            <h3>Genetics & Evolution</h3>
+                            <p>PG Level • 10 Modules</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="btn nav-link" data-section="courses">View All Courses</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section quiz-section">
+        <div class="container">
+            <h2 class="section-title">Test Your Knowledge</h2>
+            <div class="quiz-tabs">
+                <div class="quiz-tab active" data-tab="free">Free Quizzes</div>
+                <div class="quiz-tab" data-tab="premium">Premium Quizzes</div>
+            </div>
+            <div class="quiz-grid" id="quiz-container">
+                <!-- Quizzes will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard" class="section leaderboard-section">
+        <div class="container">
+            <h2 class="section-title">Leaderboard</h2>
+            <div class="leaderboard-tabs">
+                <div class="leaderboard-tab active" data-tab="overall">Overall</div>
+                <div class="leaderboard-tab" data-tab="weekly">Weekly</div>
+                <div class="leaderboard-tab" data-tab="monthly">Monthly</div>
+            </div>
+            <div class="leaderboard-content" id="leaderboard-container">
+                <!-- Leaderboard will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Page -->
+    <div class="quiz-page" id="quiz-page">
+        <div class="container">
+            <!-- Quiz Header -->
+            <div class="quiz-header">
+                <h1 class="quiz-title" id="quiz-page-title">Animal Classification Basics</h1>
+                <div class="quiz-info">
+                    <div class="quiz-timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer">50:00</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-question-circle"></i>
+                        <span id="total-questions">50 Questions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="quiz-progress-container">
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress" id="quiz-progress" style="width: 2%;"></div>
+                </div>
+            </div>
+
+            <!-- Quiz Body -->
+            <div class="quiz-body">
+                <!-- Question Navigation Sidebar -->
+                <div class="question-sidebar">
+                    <div class="question-navigation">
+                        <h3 class="question-nav-title">Question Palette</h3>
+                        <div class="question-grid" id="question-numbers">
+                            <!-- Question numbers will be generated by JavaScript -->
+                        </div>
+                        <div class="question-status">
+                            <div class="status-item">
+                                <div class="status-color status-current"></div>
+                                <span>Current</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-color status-answered"></div>
+                                <span>Answered</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-color status-skipped"></div>
+                                <span>Skipped</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-color status-not-visited"></div>
+                                <span>Not Visited</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Content -->
+                <div class="question-content">
+                    <div class="question-card fade-in" id="question-card">
+                        <div class="question-text" id="question-text">
+                            Which of the following is NOT a characteristic of mammals?
+                        </div>
+                        <div class="question-options" id="options-container">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                        <div class="question-actions">
+                            <button class="btn" id="prev-btn">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button class="btn" id="skip-btn">
+                                Skip Question
+                            </button>
+                            <button class="btn" id="next-btn">
+                                Next <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button class="btn btn-secondary" id="submit-btn" style="display: none;">
+                                Submit Quiz
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Review Section -->
+            <div class="quiz-review" id="quiz-review">
+                <h2 class="review-title">Quiz Review</h2>
+                <div id="review-questions-container">
+                    <!-- Review questions will be generated here -->
+                </div>
+            </div>
+
+            <!-- Quiz Summary -->
+            <div class="quiz-summary" id="quiz-summary">
+                <div class="container">
+                    <div class="quiz-summary-content">
+                        <h2 class="summary-title">Quiz Completed!</h2>
+                        <div class="quiz-score" id="final-score">35/50</div>
+                        <div class="quiz-percentage" id="final-percentage">70%</div>
+                        <p class="quiz-feedback" id="quiz-feedback">Good job! You have a solid understanding of animal classification basics.</p>
+                        
+                        <div class="score-breakdown">
+                            <div class="score-item score-correct">
+                                <div class="score-count" id="correct-count">35</div>
+                                <div class="score-label">Correct Answers</div>
+                            </div>
+                            <div class="score-item score-incorrect">
+                                <div class="score-count" id="incorrect-count">10</div>
+                                <div class="score-label">Incorrect Answers</div>
+                            </div>
+                            <div class="score-item score-skipped">
+                                <div class="score-count" id="skipped-count">5</div>
+                                <div class="score-label">Skipped Questions</div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-actions">
+                            <button class="btn" id="review-btn">
+                                <i class="fas fa-redo"></i> Review Answers
+                            </button>
+                            <button class="btn btn-secondary" id="new-quiz-btn">
+                                <i class="fas fa-play"></i> Take Another Quiz
+                            </button>
+                            <button class="btn" id="back-to-quiz-btn">
+                                <i class="fas fa-home"></i> Back to Quizzes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Sections (Placeholders) -->
+    <section id="about" class="section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">About Zoology Nexus</h2>
+            <div class="card">
+                <p>Zoology Nexus is dedicated to providing comprehensive learning resources for undergraduate and postgraduate zoology students.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">All Courses</h2>
+            <div class="courses-grid">
+                <!-- Course cards would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="card">
+                <div style="text-align: center;">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you. Contact us using the information below.</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <i class="fas fa-envelope" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;"></i>
+                            <h4>Email</h4>
+                            <p><a href="mailto:shivam.bharti@dakshgurukuliitg.org" style="color: var(--primary-color); text-decoration: underline;">shivam.bharti@dakshgurukuliitg.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Zoology Nexus</h3>
+                    <p>Comprehensive learning platform for Undergraduate and Postgraduate Zoology students.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ZoologyNexus?t=N9KfDfYYksK0yDCxTbCOkg&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/shivam.bharti.q?igsh=ZXp4bDhkMDNlbGI=" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-section="about">About Us</a></li>
+                        <li><a href="#" class="nav-link" data-section="courses">Courses</a></li>
+                        <li><a href="#" class="nav-link" data-section="quiz">Quizzes</a></li>
+                        <li><a href="#" class="nav-link" data-section="leaderboard">Leaderboard</a></li>
+                        <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-link" data-section="questions">Important Questions</a></li>
+                        <li><a href="#" class="nav-link" data-section="assignments">Assignments</a></li>
+                        <li><a href="#" class="nav-link" data-section="results">Results</a></li>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Department of Zoology, University Campus</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:shivam.bharti@dakshgurukuliitg.org" style="color: inherit;">shivam.bharti@dakshgurukuliitg.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 shivambharti. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 20px; text-align: center;">Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" style="color: var(--primary-color);">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px;">
+                Don't have an account? <a href="#" id="showSignup" style="color: var(--primary-color); font-weight: 600;">Sign up</a>
+            </p>
+            <div style="margin-top: 20px; text-align: center;">
+                <button class="btn btn-secondary" id="adminLogin" style="width: 100%;">Admin Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 20px; text-align: center;">Create Your Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" class="form-control" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" class="form-control" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#" style="color: var(--primary-color);">Terms and Conditions</a></label>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Sign Up</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px;">
+                Already have an account? <a href="#" id="showLogin" style="color: var(--primary-color); font-weight: 600;">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="admin-login-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-admin-modal">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-role">Role</label>
+                    <select id="admin-role" class="form-control" required>
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="subadmin1">Sub Admin 1</option>
+                        <option value="subadmin2">Sub Admin 2</option>
+                        <option value="subadmin3">Sub Admin 3</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard (Hidden by default) -->
+    <div id="adminPanel" style="display: none;">
+        <div class="admin-container">
+            <div class="admin-sidebar">
+                <h2><i class="fas fa-user-shield"></i> Admin Panel</h2>
+                <ul class="admin-nav">
+                    <li class="active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                    <li data-tab="quiz-management"><i class="fas fa-question-circle"></i> Quiz Management</li>
+                    <li data-tab="user-management"><i class="fas fa-users"></i> User Management</li>
+                    <li data-tab="analytics"><i class="fas fa-chart-bar"></i> Analytics</li>
+                    <li id="logoutAdmin"><i class="fas fa-sign-out-alt"></i> Logout</li>
+                </ul>
+            </div>
+            <div class="admin-main">
+                <div class="admin-header">
+                    <h1>Admin Dashboard</h1>
+                    <div id="admin-welcome">Welcome, <span id="admin-name">Admin</span>!</div>
+                </div>
+                
+                <!-- Dashboard -->
+                <div class="admin-tab active" id="dashboard">
+                    <div class="features-grid">
+                        <div class="card feature-card">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>Total Quizzes</h3>
+                            <p id="total-quizzes-count">0</p>
+                        </div>
+                        <div class="card feature-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Total Users</h3>
+                            <p id="total-users-count">0</p>
+                        </div>
+                        <div class="card feature-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Quiz Attempts</h3>
+                            <p id="quiz-attempts-count">0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quiz Management -->
+                <div class="admin-tab quiz-management" id="quiz-management">
+                    <div class="quiz-form">
+                        <h3>Add New Quiz</h3>
+                        <div class="form-group">
+                            <label for="quiz-title-input">Quiz Title</label>
+                            <input type="text" id="quiz-title-input" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="quiz-description">Quiz Description</label>
+                            <textarea id="quiz-description" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quiz-category">Category</label>
+                            <select id="quiz-category" class="form-control">
+                                <option value="ug">UG Level</option>
+                                <option value="pg">PG Level</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quiz-time">Time Limit (minutes)</label>
+                            <input type="number" id="quiz-time" class="form-control" value="20">
+                        </div>
+                        
+                        <div id="questions-container">
+                            <!-- Questions will be added here dynamically -->
+                        </div>
+                        
+                        <button class="btn add-question-btn" id="add-question">Add Question</button>
+                        <button class="btn btn-secondary" id="save-quiz">Save Quiz</button>
+                    </div>
+                    
+                    <div class="quiz-list">
+                        <h3>Existing Quizzes</h3>
+                        <div id="quizzes-list">
+                            <!-- Quizzes will be listed here dynamically -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other admin tabs would go here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // User credentials
+        const users = {
+            admin: { username: "admin", password: "admin123", role: "admin", name: "Main Administrator" },
+            subadmin1: { username: "subadmin1", password: "sub123", role: "subadmin1", name: "Sub Admin 1" },
+            subadmin2: { username: "subadmin2", password: "sub123", role: "subadmin2", name: "Sub Admin 2" },
+            subadmin3: { username: "subadmin3", password: "sub123", role: "subadmin3", name: "Sub Admin 3" }
+        };
+
+        // Sample quiz data with 20 questions for each section
+        const sampleQuizzes = [
+            {
+                id: 1,
+                title: "Animal Classification Basics",
+                description: "Test your knowledge of animal kingdom classification with this beginner quiz.",
+                category: "free",
+                timeLimit: 20,
+                questions: [
+                    {
+                        id: 1,
+                        text: "Which of the following is NOT a characteristic of mammals?",
+                        options: [
+                            { id: 'a', text: "They have hair or fur", isCorrect: false },
+                            { id: 'b', text: "They are warm-blooded", isCorrect: false },
+                            { id: 'c', text: "They lay eggs", isCorrect: true },
+                            { id: 'd', text: "They produce milk to feed their young", isCorrect: false }
+                        ],
+                        explanation: "Most mammals give birth to live young, but there are exceptions like the platypus and echidna which lay eggs."
+                    },
+                    {
+                        id: 2,
+                        text: "What is the largest group of arthropods?",
+                        options: [
+                            { id: 'a', text: "Arachnids", isCorrect: false },
+                            { id: 'b', text: "Crustaceans", isCorrect: false },
+                            { id: 'c', text: "Insects", isCorrect: true },
+                            { id: 'd', text: "Myriapods", isCorrect: false }
+                        ],
+                        explanation: "Insects are the largest group of arthropods, making up more than half of all known living organisms."
+                    },
+                    {
+                        id: 3,
+                        text: "Which of these animals is a marsupial?",
+                        options: [
+                            { id: 'a', text: "Kangaroo", isCorrect: true },
+                            { id: 'b', text: "Elephant", isCorrect: false },
+                            { id: 'c', text: "Platypus", isCorrect: false },
+                            { id: 'd', text: "Dolphin", isCorrect: false }
+                        ],
+                        explanation: "Kangaroos are marsupials, which are mammals that carry their young in a pouch."
+                    },
+                    {
+                        id: 4,
+                        text: "What is the primary characteristic that distinguishes reptiles from amphibians?",
+                        options: [
+                            { id: 'a', text: "They have scales", isCorrect: true },
+                            { id: 'b', text: "They lay eggs on land", isCorrect: false },
+                            { id: 'c', text: "They are cold-blooded", isCorrect: false },
+                            { id: 'd', text: "They have lungs", isCorrect: false }
+                        ],
+                        explanation: "Reptiles have dry, scaly skin while amphibians have moist, smooth skin."
+                    },
+                    {
+                        id: 5,
+                        text: "Which class of animals includes sharks and rays?",
+                        options: [
+                            { id: 'a', text: "Osteichthyes", isCorrect: false },
+                            { id: 'b', text: "Chondrichthyes", isCorrect: true },
+                            { id: 'c', text: "Agnatha", isCorrect: false },
+                            { id: 'd', text: "Amphibia", isCorrect: false }
+                        ],
+                        explanation: "Sharks and rays belong to the class Chondrichthyes, which are cartilaginous fish."
+                    },
+                    {
+                        id: 6,
+                        text: "What is the scientific study of birds called?",
+                        options: [
+                            { id: 'a', text: "Entomology", isCorrect: false },
+                            { id: 'b', text: "Ornithology", isCorrect: true },
+                            { id: 'c', text: "Herpetology", isCorrect: false },
+                            { id: 'd', text: "Ichthyology", isCorrect: false }
+                        ],
+                        explanation: "Ornithology is the scientific study of birds."
+                    },
+                    {
+                        id: 7,
+                        text: "Which of these is NOT a type of symmetry found in animals?",
+                        options: [
+                            { id: 'a', text: "Radial symmetry", isCorrect: false },
+                            { id: 'b', text: "Bilateral symmetry", isCorrect: false },
+                            { id: 'c', text: "Asymmetry", isCorrect: false },
+                            { id: 'd', text: "Hexagonal symmetry", isCorrect: true }
+                        ],
+                        explanation: "Hexagonal symmetry is not a type of symmetry found in animal body plans."
+                    },
+                    {
+                        id: 8,
+                        text: "What is the largest animal that has ever lived?",
+                        options: [
+                            { id: 'a', text: "African Elephant", isCorrect: false },
+                            { id: 'b', text: "Tyrannosaurus Rex", isCorrect: false },
+                            { id: 'c', text: "Blue Whale", isCorrect: true },
+                            { id: 'd', text: "Giraffe", isCorrect: false }
+                        ],
+                        explanation: "The blue whale is the largest animal that has ever lived, even larger than the largest dinosaurs."
+                    },
+                    {
+                        id: 9,
+                        text: "Which of these is a characteristic of all chordates at some stage of their life?",
+                        options: [
+                            { id: 'a', text: "Presence of a notochord", isCorrect: true },
+                            { id: 'b', text: "Presence of hair", isCorrect: false },
+                            { id: 'c', text: "Four-chambered heart", isCorrect: false },
+                            { id: 'd', text: "Internal skeleton made of bone", isCorrect: false }
+                        ],
+                        explanation: "All chordates have a notochord at some stage of their development."
+                    },
+                    {
+                        id: 10,
+                        text: "What is the process by which arthropods shed their exoskeleton to grow?",
+                        options: [
+                            { id: 'a', text: "Metamorphosis", isCorrect: false },
+                            { id: 'b', text: "Molting", isCorrect: true },
+                            { id: 'c', text: "Regeneration", isCorrect: false },
+                            { id: 'd', text: "Hibernation", isCorrect: false }
+                        ],
+                        explanation: "Molting is the process by which arthropods shed their exoskeleton to grow."
+                    },
+                    {
+                        id: 11,
+                        text: "Which of the following is an example of an invertebrate?",
+                        options: [
+                            { id: 'a', text: "Fish", isCorrect: false },
+                            { id: 'b', text: "Bird", isCorrect: false },
+                            { id: 'c', text: "Spider", isCorrect: true },
+                            { id: 'd', text: "Reptile", isCorrect: false }
+                        ],
+                        explanation: "Spiders are invertebrates as they lack a backbone."
+                    },
+                    {
+                        id: 12,
+                        text: "What is the primary function of the circulatory system?",
+                        options: [
+                            { id: 'a', text: "Transport of nutrients and oxygen", isCorrect: true },
+                            { id: 'b', text: "Production of hormones", isCorrect: false },
+                            { id: 'c', text: "Digestion of food", isCorrect: false },
+                            { id: 'd', text: "Filtration of blood", isCorrect: false }
+                        ],
+                        explanation: "The circulatory system's main function is to transport nutrients, oxygen, hormones, and waste products throughout the body."
+                    },
+                    {
+                        id: 13,
+                        text: "Which of these animals is a carnivore?",
+                        options: [
+                            { id: 'a', text: "Cow", isCorrect: false },
+                            { id: 'b', text: "Lion", isCorrect: true },
+                            { id: 'c', text: "Deer", isCorrect: false },
+                            { id: 'd', text: "Rabbit", isCorrect: false }
+                        ],
+                        explanation: "Lions are carnivores that primarily eat meat."
+                    },
+                    {
+                        id: 14,
+                        text: "What is the role of hemoglobin in red blood cells?",
+                        options: [
+                            { id: 'a', text: "Fight infection", isCorrect: false },
+                            { id: 'b', text: "Carry oxygen", isCorrect: true },
+                            { id: 'c', text: "Aid in blood clotting", isCorrect: false },
+                            { id: 'd', text: "Produce antibodies", isCorrect: false }
+                        ],
+                        explanation: "Hemoglobin is a protein in red blood cells that binds to oxygen molecules, allowing them to be transported from the lungs to tissues throughout the body."
+                    },
+                    {
+                        id: 15,
+                        text: "Which evolutionary mechanism is primarily responsible for adaptive evolution?",
+                        options: [
+                            { id: 'a', text: "Genetic drift", isCorrect: false },
+                            { id: 'b', text: "Gene flow", isCorrect: false },
+                            { id: 'c', text: "Natural selection", isCorrect: true },
+                            { id: 'd', text: "Mutation", isCorrect: false }
+                        ],
+                        explanation: "Natural selection is the primary mechanism of adaptive evolution, where traits that enhance survival and reproduction become more common in successive generations."
+                    },
+                    {
+                        id: 16,
+                        text: "What is the main function of the nervous system?",
+                        options: [
+                            { id: 'a', text: "Transport oxygen", isCorrect: false },
+                            { id: 'b', text: "Coordinate body activities", isCorrect: true },
+                            { id: 'c', text: "Digest food", isCorrect: false },
+                            { id: 'd', text: "Produce hormones", isCorrect: false }
+                        ],
+                        explanation: "The nervous system coordinates the body's activities by transmitting signals between different parts of the body."
+                    },
+                    {
+                        id: 17,
+                        text: "Which of these is a characteristic of birds?",
+                        options: [
+                            { id: 'a', text: "They have feathers", isCorrect: true },
+                            { id: 'b', text: "They are cold-blooded", isCorrect: false },
+                            { id: 'c', text: "They have teeth", isCorrect: false },
+                            { id: 'd', text: "They produce milk", isCorrect: false }
+                        ],
+                        explanation: "Feathers are a defining characteristic of birds."
+                    },
+                    {
+                        id: 18,
+                        text: "What is the function of the mitochondria?",
+                        options: [
+                            { id: 'a', text: "Protein synthesis", isCorrect: false },
+                            { id: 'b', text: "Cellular respiration", isCorrect: true },
+                            { id: 'c', text: "DNA storage", isCorrect: false },
+                            { id: 'd', text: "Waste removal", isCorrect: false }
+                        ],
+                        explanation: "Mitochondria are known as the powerhouse of the cell because they generate most of the cell's supply of ATP through cellular respiration."
+                    },
+                    {
+                        id: 19,
+                        text: "Which of these animals is an amphibian?",
+                        options: [
+                            { id: 'a', text: "Lizard", isCorrect: false },
+                            { id: 'b', text: "Frog", isCorrect: true },
+                            { id: 'c', text: "Turtle", isCorrect: false },
+                            { id: 'd', text: "Snake", isCorrect: false }
+                        ],
+                        explanation: "Frogs are amphibians that typically live both in water and on land during different stages of their life cycle."
+                    },
+                    {
+                        id: 20,
+                        text: "What is the primary function of the respiratory system?",
+                        options: [
+                            { id: 'a', text: "Pump blood", isCorrect: false },
+                            { id: 'b', text: "Exchange gases", isCorrect: true },
+                            { id: 'c', text: "Digest food", isCorrect: false },
+                            { id: 'd', text: "Filter waste", isCorrect: false }
+                        ],
+                        explanation: "The respiratory system is responsible for the exchange of oxygen and carbon dioxide between the body and the environment."
+                    }
+                ]
+            },
+            {
+                id: 2,
+                title: "Cell Biology Fundamentals",
+                description: "Covering cell structure, organelles, and basic cellular processes.",
+                category: "free",
+                timeLimit: 20,
+                questions: [
+                    {
+                        id: 1,
+                        text: "Which organelle is known as the 'powerhouse' of the cell?",
+                        options: [
+                            { id: 'a', text: "Nucleus", isCorrect: false },
+                            { id: 'b', text: "Mitochondria", isCorrect: true },
+                            { id: 'c', text: "Ribosome", isCorrect: false },
+                            { id: 'd', text: "Golgi apparatus", isCorrect: false }
+                        ],
+                        explanation: "Mitochondria are known as the powerhouse of the cell because they generate most of the cell's supply of ATP."
+                    },
+                    {
+                        id: 2,
+                        text: "What is the function of the ribosomes?",
+                        options: [
+                            { id: 'a', text: "Protein synthesis", isCorrect: true },
+                            { id: 'b', text: "Lipid synthesis", isCorrect: false },
+                            { id: 'c', text: "DNA replication", isCorrect: false },
+                            { id: 'd', text: "Cellular respiration", isCorrect: false }
+                        ],
+                        explanation: "Ribosomes are responsible for protein synthesis in the cell."
+                    },
+                    {
+                        id: 3,
+                        text: "Which organelle contains the cell's genetic material?",
+                        options: [
+                            { id: 'a', text: "Mitochondria", isCorrect: false },
+                            { id: 'b', text: "Endoplasmic reticulum", isCorrect: false },
+                            { id: 'c', text: "Nucleus", isCorrect: true },
+                            { id: 'd', text: "Lysosome", isCorrect: false }
+                        ],
+                        explanation: "The nucleus contains the cell's genetic material (DNA) and controls cellular activities."
+                    },
+                    {
+                        id: 4,
+                        text: "What is the function of the Golgi apparatus?",
+                        options: [
+                            { id: 'a', text: "Protein synthesis", isCorrect: false },
+                            { id: 'b', text: "Energy production", isCorrect: false },
+                            { id: 'c', text: "Modifying and packaging proteins", isCorrect: true },
+                            { id: 'd', text: "Cellular digestion", isCorrect: false }
+                        ],
+                        explanation: "The Golgi apparatus modifies, sorts, and packages proteins for secretion or delivery to other organelles."
+                    },
+                    {
+                        id: 5,
+                        text: "Which of the following is NOT found in plant cells?",
+                        options: [
+                            { id: 'a', text: "Cell wall", isCorrect: false },
+                            { id: 'b', text: "Chloroplast", isCorrect: false },
+                            { id: 'c', text: "Large central vacuole", isCorrect: false },
+                            { id: 'd', text: "Centrioles", isCorrect: true }
+                        ],
+                        explanation: "Centrioles are found in animal cells but not in plant cells."
+                    },
+                    {
+                        id: 6,
+                        text: "What is the function of lysosomes?",
+                        options: [
+                            { id: 'a', text: "Protein synthesis", isCorrect: false },
+                            { id: 'b', text: "Cellular digestion", isCorrect: true },
+                            { id: 'c', text: "Energy production", isCorrect: false },
+                            { id: 'd', text: "Lipid synthesis", isCorrect: false }
+                        ],
+                        explanation: "Lysosomes contain digestive enzymes that break down waste materials and cellular debris."
+                    },
+                    {
+                        id: 7,
+                        text: "Which organelle is responsible for photosynthesis?",
+                        options: [
+                            { id: 'a', text: "Mitochondria", isCorrect: false },
+                            { id: 'b', text: "Chloroplast", isCorrect: true },
+                            { id: 'c', text: "Ribosome", isCorrect: false },
+                            { id: 'd', text: "Nucleus", isCorrect: false }
+                        ],
+                        explanation: "Chloroplasts are the organelles where photosynthesis occurs in plant cells."
+                    },
+                    {
+                        id: 8,
+                        text: "What is the function of the endoplasmic reticulum?",
+                        options: [
+                            { id: 'a', text: "Protein and lipid synthesis", isCorrect: true },
+                            { id: 'b', text: "Cellular respiration", isCorrect: false },
+                            { id: 'c', text: "DNA replication", isCorrect: false },
+                            { id: 'd', text: "Waste removal", isCorrect: false }
+                        ],
+                        explanation: "The endoplasmic reticulum is involved in the synthesis of proteins and lipids."
+                    },
+                    {
+                        id: 9,
+                        text: "Which of the following is a characteristic of prokaryotic cells?",
+                        options: [
+                            { id: 'a', text: "They have a nucleus", isCorrect: false },
+                            { id: 'b', text: "They have membrane-bound organelles", isCorrect: false },
+                            { id: 'c', text: "They are typically larger than eukaryotic cells", isCorrect: false },
+                            { id: 'd', text: "They lack a nucleus", isCorrect: true }
+                        ],
+                        explanation: "Prokaryotic cells lack a nucleus and other membrane-bound organelles."
+                    },
+                    {
+                        id: 10,
+                        text: "What is the function of the cell membrane?",
+                        options: [
+                            { id: 'a', text: "Control what enters and leaves the cell", isCorrect: true },
+                            { id: 'b', text: "Provide structural support", isCorrect: false },
+                            { id: 'c', text: "Store genetic information", isCorrect: false },
+                            { id: 'd', text: "Produce energy", isCorrect: false }
+                        ],
+                        explanation: "The cell membrane regulates the movement of substances in and out of the cell."
+                    },
+                    {
+                        id: 11,
+                        text: "Which organelle is involved in cellular respiration?",
+                        options: [
+                            { id: 'a', text: "Chloroplast", isCorrect: false },
+                            { id: 'b', text: "Mitochondria", isCorrect: true },
+                            { id: 'c', text: "Nucleus", isCorrect: false },
+                            { id: 'd', text: "Golgi apparatus", isCorrect: false }
+                        ],
+                        explanation: "Mitochondria are the sites of cellular respiration where ATP is produced."
+                    },
+                    {
+                        id: 12,
+                        text: "What is the function of the cytoskeleton?",
+                        options: [
+                            { id: 'a', text: "Provide structural support and facilitate movement", isCorrect: true },
+                            { id: 'b', text: "Store genetic information", isCorrect: false },
+                            { id: 'c', text: "Produce proteins", isCorrect: false },
+                            { id: 'd', text: "Digest cellular waste", isCorrect: false }
+                        ],
+                        explanation: "The cytoskeleton provides structural support, helps in cell division, and facilitates cellular movement."
+                    },
+                    {
+                        id: 13,
+                        text: "Which of the following is a function of the nucleolus?",
+                        options: [
+                            { id: 'a', text: "Protein synthesis", isCorrect: false },
+                            { id: 'b', text: "Ribosome assembly", isCorrect: true },
+                            { id: 'c', text: "DNA replication", isCorrect: false },
+                            { id: 'd', text: "Cellular respiration", isCorrect: false }
+                        ],
+                        explanation: "The nucleolus is involved in the assembly of ribosomes."
+                    },
+                    {
+                        id: 14,
+                        text: "What is the main component of the cell wall in plants?",
+                        options: [
+                            { id: 'a', text: "Cellulose", isCorrect: true },
+                            { id: 'b', text: "Chitin", isCorrect: false },
+                            { id: 'c', text: "Peptidoglycan", isCorrect: false },
+                            { id: 'd', text: "Phospholipids", isCorrect: false }
+                        ],
+                        explanation: "The plant cell wall is primarily composed of cellulose."
+                    },
+                    {
+                        id: 15,
+                        text: "Which organelle is responsible for detoxifying harmful substances?",
+                        options: [
+                            { id: 'a', text: "Lysosome", isCorrect: false },
+                            { id: 'b', text: "Peroxisome", isCorrect: true },
+                            { id: 'c', text: "Mitochondria", isCorrect: false },
+                            { id: 'd', text: "Golgi apparatus", isCorrect: false }
+                        ],
+                        explanation: "Peroxisomes contain enzymes that detoxify various harmful substances."
+                    },
+                    {
+                        id: 16,
+                        text: "What is the function of the vacuole in plant cells?",
+                        options: [
+                            { id: 'a', text: "Store water and maintain turgor pressure", isCorrect: true },
+                            { id: 'b', text: "Produce energy", isCorrect: false },
+                            { id: 'c', text: "Synthesize proteins", isCorrect: false },
+                            { id: 'd', text: "Control cell division", isCorrect: false }
+                        ],
+                        explanation: "The large central vacuole in plant cells stores water, ions, and nutrients, and helps maintain turgor pressure."
+                    },
+                    {
+                        id: 17,
+                        text: "Which of the following is a characteristic of eukaryotic cells?",
+                        options: [
+                            { id: 'a', text: "They lack a nucleus", isCorrect: false },
+                            { id: 'b', text: "They have membrane-bound organelles", isCorrect: true },
+                            { id: 'c', text: "They are typically smaller than prokaryotic cells", isCorrect: false },
+                            { id: 'd', text: "They have circular DNA", isCorrect: false }
+                        ],
+                        explanation: "Eukaryotic cells have a nucleus and other membrane-bound organelles."
+                    },
+                    {
+                        id: 18,
+                        text: "What is the function of the centrioles?",
+                        options: [
+                            { id: 'a', text: "Aid in cell division", isCorrect: true },
+                            { id: 'b', text: "Produce energy", isCorrect: false },
+                            { id: 'c', text: "Synthesize proteins", isCorrect: false },
+                            { id: 'd', text: "Store genetic information", isCorrect: false }
+                        ],
+                        explanation: "Centrioles play a role in cell division by organizing the microtubules of the spindle apparatus."
+                    },
+                    {
+                        id: 19,
+                        text: "Which organelle is involved in lipid synthesis?",
+                        options: [
+                            { id: 'a', text: "Rough endoplasmic reticulum", isCorrect: false },
+                            { id: 'b', text: "Smooth endoplasmic reticulum", isCorrect: true },
+                            { id: 'c', text: "Mitochondria", isCorrect: false },
+                            { id: 'd', text: "Lysosome", isCorrect: false }
+                        ],
+                        explanation: "The smooth endoplasmic reticulum is involved in lipid synthesis and detoxification."
+                    },
+                    {
+                        id: 20,
+                        text: "What is the function of the nuclear envelope?",
+                        options: [
+                            { id: 'a', text: "Separate the nucleus from the cytoplasm", isCorrect: true },
+                            { id: 'b', text: "Produce ribosomes", isCorrect: false },
+                            { id: 'c', text: "Synthesize proteins", isCorrect: false },
+                            { id: 'd', text: "Store genetic information", isCorrect: false }
+                        ],
+                        explanation: "The nuclear envelope separates the nucleus from the cytoplasm and regulates the passage of molecules between them."
+                    }
+                ]
+            },
+            {
+                id: 3,
+                title: "Genetics & Inheritance",
+                description: "Test your understanding of Mendelian genetics and inheritance patterns.",
+                category: "free",
+                timeLimit: 20,
+                questions: [
+                    {
+                        id: 1,
+                        text: "Who is considered the father of genetics?",
+                        options: [
+                            { id: 'a', text: "Charles Darwin", isCorrect: false },
+                            { id: 'b', text: "Gregor Mendel", isCorrect: true },
+                            { id: 'c', text: "James Watson", isCorrect: false },
+                            { id: 'd', text: "Francis Crick", isCorrect: false }
+                        ],
+                        explanation: "Gregor Mendel is known as the father of genetics for his pioneering work on inheritance in pea plants."
+                    },
+                    {
+                        id: 2,
+                        text: "What is the basic unit of heredity?",
+                        options: [
+                            { id: 'a', text: "Chromosome", isCorrect: false },
+                            { id: 'b', text: "Gene", isCorrect: true },
+                            { id: 'c', text: "DNA", isCorrect: false },
+                            { id: 'd', text: "Protein", isCorrect: false }
+                        ],
+                        explanation: "A gene is the basic physical and functional unit of heredity."
+                    },
+                    {
+                        id: 3,
+                        text: "Which of the following represents a homozygous genotype?",
+                        options: [
+                            { id: 'a', text: "Aa", isCorrect: false },
+                            { id: 'b', text: "AA", isCorrect: true },
+                            { id: 'c', text: "AB", isCorrect: false },
+                            { id: 'd', text: "aB", isCorrect: false }
+                        ],
+                        explanation: "A homozygous genotype has two identical alleles for a particular gene (e.g., AA or aa)."
+                    },
+                    {
+                        id: 4,
+                        text: "What is the phenotype of an organism?",
+                        options: [
+                            { id: 'a', text: "Its genetic makeup", isCorrect: false },
+                            { id: 'b', text: "Its physical characteristics", isCorrect: true },
+                            { id: 'c', text: "Its chromosome number", isCorrect: false },
+                            { id: 'd', text: "Its DNA sequence", isCorrect: false }
+                        ],
+                        explanation: "Phenotype refers to the observable physical or biochemical characteristics of an organism."
+                    },
+                    {
+                        id: 5,
+                        text: "Which law of inheritance states that alleles segregate during gamete formation?",
+                        options: [
+                            { id: 'a', text: "Law of Independent Assortment", isCorrect: false },
+                            { id: 'b', text: "Law of Segregation", isCorrect: true },
+                            { id: 'c', text: "Law of Dominance", isCorrect: false },
+                            { id: 'd', text: "Law of Inheritance", isCorrect: false }
+                        ],
+                        explanation: "Mendel's Law of Segregation states that allele pairs separate during gamete formation."
+                    },
+                    {
+                        id: 6,
+                        text: "What is a dominant allele?",
+                        options: [
+                            { id: 'a', text: "An allele that is always expressed", isCorrect: false },
+                            { id: 'b', text: "An allele that is expressed in the phenotype when present", isCorrect: true },
+                            { id: 'c', text: "An allele that is never expressed", isCorrect: false },
+                            { id: 'd', text: "An allele that is only expressed in males", isCorrect: false }
+                        ],
+                        explanation: "A dominant allele is expressed in the phenotype when at least one copy is present."
+                    },
+                    {
+                        id: 7,
+                        text: "Which of the following is an example of a recessive genetic disorder?",
+                        options: [
+                            { id: 'a', text: "Huntington's disease", isCorrect: false },
+                            { id: 'b', text: "Cystic fibrosis", isCorrect: true },
+                            { id: 'c', text: "Marfan syndrome", isCorrect: false },
+                            { id: 'd', text: "Achondroplasia", isCorrect: false }
+                        ],
+                        explanation: "Cystic fibrosis is an autosomal recessive disorder."
+                    },
+                    {
+                        id: 8,
+                        text: "What is the probability of two heterozygous parents having a homozygous recessive child?",
+                        options: [
+                            { id: 'a', text: "25%", isCorrect: true },
+                            { id: 'b', text: "50%", isCorrect: false },
+                            { id: 'c', text: "75%", isCorrect: false },
+                            { id: 'd', text: "100%", isCorrect: false }
+                        ],
+                        explanation: "In a monohybrid cross of two heterozygotes (Aa x Aa), the probability of a homozygous recessive (aa) offspring is 25%."
+                    },
+                    {
+                        id: 9,
+                        text: "Which of the following describes codominance?",
+                        options: [
+                            { id: 'a', text: "One allele completely masks the other", isCorrect: false },
+                            { id: 'b', text: "Both alleles are expressed equally in the phenotype", isCorrect: true },
+                            { id: 'c', text: "The heterozygote has an intermediate phenotype", isCorrect: false },
+                            { id: 'd', text: "The phenotype is influenced by multiple genes", isCorrect: false }
+                        ],
+                        explanation: "In codominance, both alleles are fully expressed in the heterozygote."
+                    },
+                    {
+                        id: 10,
+                        text: "What is a mutation?",
+                        options: [
+                            { id: 'a', text: "A change in DNA sequence", isCorrect: true },
+                            { id: 'b', text: "A change in protein structure", isCorrect: false },
+                            { id: 'c', text: "A change in chromosome number", isCorrect: false },
+                            { id: 'd', text: "A change in phenotype", isCorrect: false }
+                        ],
+                        explanation: "A mutation is a permanent alteration in the DNA sequence that makes up a gene."
+                    },
+                    {
+                        id: 11,
+                        text: "Which of the following is true about sex-linked inheritance?",
+                        options: [
+                            { id: 'a', text: "It only affects males", isCorrect: false },
+                            { id: 'b', text: "It involves genes on the sex chromosomes", isCorrect: true },
+                            { id: 'c', text: "It always shows complete dominance", isCorrect: false },
+                            { id: 'd', text: "It only affects reproductive traits", isCorrect: false }
+                        ],
+                        explanation: "Sex-linked inheritance involves genes located on the sex chromosomes (X or Y)."
+                    },
+                    {
+                        id: 12,
+                        text: "What is the purpose of a Punnett square?",
+                        options: [
+                            { id: 'a', text: "To determine DNA sequence", isCorrect: false },
+                            { id: 'b', text: "To predict the probability of offspring genotypes", isCorrect: true },
+                            { id: 'c', text: "To visualize chromosome structure", isCorrect: false },
+                            { id: 'd', text: "To identify mutations", isCorrect: false }
+                        ],
+                        explanation: "A Punnett square is used to predict the probability of different genotypes in the offspring of a cross."
+                    },
+                    {
+                        id: 13,
+                        text: "Which of the following is an example of incomplete dominance?",
+                        options: [
+                            { id: 'a', text: "AB blood type", isCorrect: false },
+                            { id: 'b', text: "Snapdragon flower color", isCorrect: true },
+                            { id: 'c', text: "Tongue rolling ability", isCorrect: false },
+                            { id: 'd', text: "Huntington's disease", isCorrect: false }
+                        ],
+                        explanation: "In snapdragons, a cross between red and white flowers produces pink flowers, showing incomplete dominance."
+                    },
+                    {
+                        id: 14,
+                        text: "What is a pedigree?",
+                        options: [
+                            { id: 'a', text: "A chart that shows genetic relationships in a family", isCorrect: true },
+                            { id: 'b', text: "A type of genetic mutation", isCorrect: false },
+                            { id: 'c', text: "A method of DNA sequencing", isCorrect: false },
+                            { id: 'd', text: "A tool for protein synthesis", isCorrect: false }
+                        ],
+                        explanation: "A pedigree is a chart that shows the relationships within a family and the inheritance of particular traits."
+                    },
+                    {
+                        id: 15,
+                        text: "Which of the following is a polygenic trait?",
+                        options: [
+                            { id: 'a', text: "Blood type", isCorrect: false },
+                            { id: 'b', text: "Height", isCorrect: true },
+                            { id: 'c', text: "Widow's peak", isCorrect: false },
+                            { id: 'd', text: "Huntington's disease", isCorrect: false }
+                        ],
+                        explanation: "Height is a polygenic trait influenced by multiple genes."
+                    },
+                    {
+                        id: 16,
+                        text: "What is the difference between genotype and phenotype?",
+                        options: [
+                            { id: 'a', text: "Genotype is physical, phenotype is genetic", isCorrect: false },
+                            { id: 'b', text: "Genotype is genetic, phenotype is physical", isCorrect: true },
+                            { id: 'c', text: "They are the same thing", isCorrect: false },
+                            { id: 'd', text: "Genotype is environmental, phenotype is genetic", isCorrect: false }
+                        ],
+                        explanation: "Genotype refers to the genetic makeup, while phenotype refers to the observable characteristics."
+                    },
+                    {
+                        id: 17,
+                        text: "Which of the following is an example of a sex-linked disorder?",
+                        options: [
+                            { id: 'a', text: "Cystic fibrosis", isCorrect: false },
+                            { id: 'b', text: "Hemophilia", isCorrect: true },
+                            { id: 'c', text: "Huntington's disease", isCorrect: false },
+                            { id: 'd', text: "Phenylketonuria", isCorrect: false }
+                        ],
+                        explanation: "Hemophilia is an X-linked recessive disorder."
+                    },
+                    {
+                        id: 18,
+                        text: "What is the law of independent assortment?",
+                        options: [
+                            { id: 'a', text: "Alleles segregate during gamete formation", isCorrect: false },
+                            { id: 'b', text: "Genes for different traits are inherited independently", isCorrect: true },
+                            { id: 'c', text: "Dominant alleles mask recessive alleles", isCorrect: false },
+                            { id: 'd', text: "All genes are linked on the same chromosome", isCorrect: false }
+                        ],
+                        explanation: "Mendel's Law of Independent Assortment states that genes for different traits are inherited independently of one another."
+                    },
+                    {
+                        id: 19,
+                        text: "What is a carrier in genetics?",
+                        options: [
+                            { id: 'a', text: "Someone who has two copies of a dominant allele", isCorrect: false },
+                            { id: 'b', text: "Someone who has one copy of a recessive allele but doesn't show the trait", isCorrect: true },
+                            { id: 'c', text: "Someone who has a chromosomal abnormality", isCorrect: false },
+                            { id: 'd', text: "Someone who has a mutation in every cell", isCorrect: false }
+                        ],
+                        explanation: "A carrier has one copy of a recessive allele and typically does not show the associated trait but can pass it to offspring."
+                    },
+                    {
+                        id: 20,
+                        text: "Which of the following is true about autosomal dominant inheritance?",
+                        options: [
+                            { id: 'a', text: "It skips generations", isCorrect: false },
+                            { id: 'b', text: "It affects males more than females", isCorrect: false },
+                            { id: 'c', text: "Affected individuals have at least one affected parent", isCorrect: true },
+                            { id: 'd', text: "It only appears in homozygous individuals", isCorrect: false }
+                        ],
+                        explanation: "In autosomal dominant inheritance, affected individuals typically have at least one affected parent, and the trait does not skip generations."
+                    }
+                ]
+            }
+        ];
+
+        // Current state
+        let currentTheme = 'light'; // Changed to light as default
+        let currentQuiz = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let quizTimer = null;
+        let timeLeft = 0;
+        let quizzes = JSON.parse(localStorage.getItem('zoologyQuizzes')) || sampleQuizzes;
+        let currentUser = null;
+        let answeredQuestions = []; // Track which questions have been answered and locked
+
+        // DOM Elements
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+        const closeModal = document.querySelectorAll('.close-modal');
+        const adminLogin = document.getElementById('adminLogin');
+        const adminPanel = document.getElementById('adminPanel');
+        const logoutAdmin = document.getElementById('logoutAdmin');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+        const quizPage = document.getElementById('quiz-page');
+        const homeLink = document.getElementById('home-link');
+        const backToQuizBtn = document.getElementById('back-to-quiz-btn');
+        const newQuizBtn = document.getElementById('new-quiz-btn');
+        const reviewBtn = document.getElementById('review-btn');
+        const quizReview = document.getElementById('quiz-review');
+        const reviewQuestionsContainer = document.getElementById('review-questions-container');
+        const showSignup = document.getElementById('showSignup');
+        const showLogin = document.getElementById('showLogin');
+        const leaderboardSection = document.getElementById('leaderboard');
+        const leaderboardTabs = document.querySelectorAll('.leaderboard-tab');
+        const leaderboardContainer = document.getElementById('leaderboard-container');
+
+        // Enhanced Mobile Menu Functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinksContainer = document.querySelector('.nav-links');
+        
+        // Admin elements
+        const adminLoginModal = document.getElementById('admin-login-modal');
+        const closeAdminModal = document.getElementById('close-admin-modal');
+        const adminLoginForm = document.getElementById('admin-login-form');
+        const adminWelcome = document.getElementById('admin-welcome');
+        const adminName = document.getElementById('admin-name');
+        const adminTabs = document.querySelectorAll('.admin-nav li[data-tab]');
+        const adminTabContents = document.querySelectorAll('.admin-tab');
+        const quizManagementTab = document.getElementById('quiz-management');
+        const questionsContainer = document.getElementById('questions-container');
+        const addQuestionBtn = document.getElementById('add-question');
+        const saveQuizBtn = document.getElementById('save-quiz');
+        const quizzesList = document.getElementById('quizzes-list');
+        const totalQuizzesCount = document.getElementById('total-quizzes-count');
+        const totalUsersCount = document.getElementById('total-users-count');
+        const quizAttemptsCount = document.getElementById('quiz-attempts-count');
+        const quizContainer = document.getElementById('quiz-container');
+
+        // Initialize the application
+        function init() {
+            // Set default theme to light
+            document.body.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            
+            // Load quizzes from localStorage
+            if (!localStorage.getItem('zoologyQuizzes')) {
+                localStorage.setItem('zoologyQuizzes', JSON.stringify(quizzes));
+            } else {
+                quizzes = JSON.parse(localStorage.getItem('zoologyQuizzes'));
+            }
+            
+            // Load user accounts from localStorage
+            if (!localStorage.getItem('zoologyUsers')) {
+                localStorage.setItem('zoologyUsers', JSON.stringify({}));
+            }
+            
+            // Set up event listeners
+            setupEventListeners();
+            
+            // Render quizzes
+            renderQuizzes();
+            
+            // Render leaderboard
+            renderLeaderboard();
+            
+            // Update admin dashboard
+            updateAdminDashboard();
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Theme toggle
+            themeToggle.addEventListener('click', toggleTheme);
+            
+            // Mobile menu
+            mobileMenu.addEventListener('click', toggleMobileMenu);
+            
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinksContainer.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Modal Functionality
+            loginBtn.addEventListener('click', () => {
+                loginModal.style.display = 'flex';
+            });
+
+            closeModal.forEach(closeBtn => {
+                closeBtn.addEventListener('click', (e) => {
+                    e.target.closest('.modal').style.display = 'none';
+                });
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === loginModal) {
+                    loginModal.style.display = 'none';
+                }
+                if (e.target === signupModal) {
+                    signupModal.style.display = 'none';
+                }
+            });
+
+            // Show signup modal
+            showSignup.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.style.display = 'none';
+                signupModal.style.display = 'flex';
+            });
+
+            // Show login modal
+            showLogin.addEventListener('click', (e) => {
+                e.preventDefault();
+                signupModal.style.display = 'none';
+                loginModal.style.display = 'flex';
+            });
+
+            // Login form
+            document.getElementById('loginForm').addEventListener('submit', handleUserLogin);
+
+            // Signup form
+            document.getElementById('signupForm').addEventListener('submit', handleUserSignup);
+
+            // Admin Login
+            adminLogin.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.style.display = 'none';
+                adminLoginModal.style.display = 'flex';
+            });
+
+            closeAdminModal.addEventListener('click', () => {
+                adminLoginModal.style.display = 'none';
+                adminLoginForm.reset();
+            });
+
+            adminLoginForm.addEventListener('submit', handleAdminLogin);
+
+            logoutAdmin.addEventListener('click', handleAdminLogout);
+
+            // Admin tabs
+            adminTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.dataset.tab;
+                    switchAdminTab(tabId);
+                });
+            });
+
+            // Quiz management
+            addQuestionBtn.addEventListener('click', addQuestionForm);
+            saveQuizBtn.addEventListener('click', saveQuiz);
+
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === adminLoginModal) {
+                    adminLoginModal.style.display = 'none';
+                    adminLoginForm.reset();
+                }
+            });
+
+            // Navigation between sections
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSection = link.getAttribute('data-section');
+                    
+                    // Hide all sections
+                    sections.forEach(section => {
+                        section.classList.remove('active-section');
+                        section.style.display = 'none';
+                    });
+                    
+                    // Show target section
+                    document.getElementById(targetSection).classList.add('active-section');
+                    document.getElementById(targetSection).style.display = 'block';
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 992) {
+                        navLinksContainer.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+
+            // Home link
+            homeLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Hide all sections and quiz page
+                sections.forEach(section => {
+                    section.classList.remove('active-section');
+                    section.style.display = 'none';
+                });
+                quizPage.classList.remove('active');
+                quizPage.style.display = 'none';
+                
+                // Show home section
+                document.getElementById('home').classList.add('active-section');
+                document.getElementById('home').style.display = 'block';
+            });
+
+            // Quiz tabs
+            document.querySelectorAll('.quiz-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    renderQuizzes(tab.dataset.tab);
+                });
+            });
+
+            // Leaderboard tabs
+            leaderboardTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.leaderboard-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    renderLeaderboard(tab.dataset.tab);
+                });
+            });
+
+            // Quiz navigation
+            document.getElementById('prev-btn').addEventListener('click', goToPreviousQuestion);
+            document.getElementById('skip-btn').addEventListener('click', skipQuestion);
+            document.getElementById('next-btn').addEventListener('click', goToNextQuestion);
+            document.getElementById('submit-btn').addEventListener('click', submitQuiz);
+            
+            // Quiz review and summary
+            reviewBtn.addEventListener('click', showQuizReview);
+            newQuizBtn.addEventListener('click', () => {
+                // Reset quiz summary
+                document.querySelector('.quiz-body').style.display = 'flex';
+                document.getElementById('quiz-summary').style.display = 'none';
+                quizReview.classList.remove('active');
+                
+                // Go back to quiz selection
+                quizPage.classList.remove('active');
+                quizPage.style.display = 'none';
+                document.getElementById('quiz').classList.add('active-section');
+                document.getElementById('quiz').style.display = 'block';
+            });
+            backToQuizBtn.addEventListener('click', () => {
+                quizPage.classList.remove('active');
+                quizPage.style.display = 'none';
+                document.getElementById('quiz').classList.add('active-section');
+                document.getElementById('quiz').style.display = 'block';
+                
+                // Reset quiz summary
+                document.querySelector('.quiz-body').style.display = 'flex';
+                document.getElementById('quiz-summary').style.display = 'none';
+                quizReview.classList.remove('active');
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 992) {
+                    navLinksContainer.style.display = 'flex';
+                    navLinksContainer.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                } else {
+                    navLinksContainer.style.display = 'none';
+                }
+            });
+
+            // Fade-in Animation on Scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = () => {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state for fade elements
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            window.addEventListener('scroll', fadeInOnScroll);
+            // Check on page load
+            fadeInOnScroll();
+        }
+
+        // Theme toggle function
+        function toggleTheme() {
+            if (document.body.getAttribute('data-theme') === 'dark') {
+                document.body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Render leaderboard
+        function renderLeaderboard(period = 'overall') {
+            leaderboardContainer.innerHTML = '';
+            
+            // Get leaderboard data from localStorage
+            let leaderboardData = JSON.parse(localStorage.getItem('zoologyLeaderboard')) || [];
+            
+            // Filter by period if needed
+            if (period !== 'overall') {
+                const now = new Date();
+                let startDate;
+                
+                if (period === 'weekly') {
+                    startDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                } else if (period === 'monthly') {
+                    startDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                }
+                
+                leaderboardData = leaderboardData.filter(entry => {
+                    const entryDate = new Date(entry.date);
+                    return entryDate >= startDate;
+                });
+            }
+            
+            // Sort by score (descending)
+            leaderboardData.sort((a, b) => b.score - a.score);
+            
+            if (leaderboardData.length === 0) {
+                leaderboardContainer.innerHTML = `
+                    <div class="no-data">
+                        <i class="fas fa-trophy" style="font-size: 3rem; margin-bottom: 15px; color: var(--accent-color);"></i>
+                        <h3>No Data Available</h3>
+                        <p>Complete a quiz to appear on the leaderboard!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const table = document.createElement('table');
+            table.className = 'leaderboard-table';
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th>User</th>
+                        <th>Quiz</th>
+                        <th class="score">Score</th>
+                        <th class="date">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${leaderboardData.map((entry, index) => `
+                        <tr>
+                            <td class="rank ${index === 0 ? 'rank-1' : ''} ${index === 1 ? 'rank-2' : ''} ${index === 2 ? 'rank-3' : ''}">
+                                ${index + 1}
+                            </td>
+                            <td>${entry.userName || 'Anonymous'}</td>
+                            <td>${entry.quizTitle}</td>
+                            <td class="score">${entry.score}/${entry.totalQuestions} (${entry.percentage}%)</td>
+                            <td class="date">${new Date(entry.date).toLocaleDateString()}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            `;
+            
+            leaderboardContainer.appendChild(table);
+        }
+
+        // Render quizzes based on category
+        function renderQuizzes(category = 'free') {
+            quizContainer.innerHTML = '';
+            
+            const filteredQuizzes = category === 'free' 
+                ? quizzes 
+                : quizzes.filter(quiz => quiz.category === category);
+            
+            if (filteredQuizzes.length === 0) {
+                quizContainer.innerHTML = '<p>No quizzes available in this category.</p>';
+                return;
+            }
+            
+            filteredQuizzes.forEach(quiz => {
+                const quizCard = document.createElement('div');
+                quizCard.className = 'card quiz-card';
+                quizCard.innerHTML = `
+                    <div class="quiz-price">Free</div>
+                    <h3>${quiz.title}</h3>
+                    <p>${quiz.description}</p>
+                    <div class="quiz-meta">
+                        <span><i class="far fa-clock"></i> ${quiz.timeLimit} min</span>
+                        <span><i class="far fa-question-circle"></i> ${quiz.questions.length} Questions</span>
+                    </div>
+                    <button class="btn start-quiz-btn" data-quiz-id="${quiz.id}" style="margin-top: 15px; width: 100%;">Start Quiz</button>
+                `;
+                quizContainer.appendChild(quizCard);
+            });
+            
+            // Add event listeners to start quiz buttons
+            document.querySelectorAll('.start-quiz-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const quizId = parseInt(e.target.dataset.quizId);
+                    startQuiz(quizId);
+                });
+            });
+        }
+
+        // Start a quiz
+        function startQuiz(quizId) {
+            currentQuiz = quizzes.find(quiz => quiz.id === quizId);
+            if (!currentQuiz) return;
+            
+            // Reset state
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            answeredQuestions = Array(currentQuiz.questions.length).fill(false);
+            timeLeft = currentQuiz.timeLimit * 60; // Convert to seconds
+            
+            // Update UI
+            document.getElementById('quiz-page-title').textContent = currentQuiz.title;
+            document.getElementById('total-questions').textContent = `${currentQuiz.questions.length} Questions`;
+            
+            // Hide all sections and show quiz page
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            quizPage.classList.add('active');
+            quizPage.style.display = 'block';
+            
+            // Initialize quiz
+            initializeQuiz();
+            startTimer();
+        }
+
+        // Initialize quiz UI
+        function initializeQuiz() {
+            // Create question numbers
+            const questionNumbersContainer = document.getElementById('question-numbers');
+            questionNumbersContainer.innerHTML = '';
+            
+            currentQuiz.questions.forEach((_, index) => {
+                const questionNumber = document.createElement('div');
+                questionNumber.className = 'question-number';
+                questionNumber.textContent = index + 1;
+                questionNumber.dataset.index = index;
+                questionNumber.addEventListener('click', () => goToQuestion(index));
+                questionNumbersContainer.appendChild(questionNumber);
+            });
+            
+            // Show first question
+            showQuestion(currentQuestionIndex);
+
+            // Update progress bar
+            updateProgressBar();
+        }
+
+        // Show a specific question
+        function showQuestion(index) {
+            if (index < 0 || index >= currentQuiz.questions.length) return;
+            
+            currentQuestionIndex = index;
+            const question = currentQuiz.questions[index];
+            
+            // Update question text
+            document.getElementById('question-text').textContent = `${index + 1}. ${question.text}`;
+            
+            // Clear options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            // Create options
+            question.options.forEach((option, optionIndex) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                if (userAnswers[index] === option.id) {
+                    optionElement.classList.add('selected');
+                }
+                
+                // If question is answered (locked), disable interaction
+                if (answeredQuestions[index]) {
+                    optionElement.style.pointerEvents = 'none';
+                }
+                
+                const optionLabel = document.createElement('div');
+                optionLabel.className = 'option-label';
+                optionLabel.textContent = option.id.toUpperCase();
+                
+                const optionText = document.createElement('div');
+                optionText.className = 'option-text';
+                optionText.textContent = option.text;
+                
+                optionElement.appendChild(optionLabel);
+                optionElement.appendChild(optionText);
+                
+                optionElement.addEventListener('click', () => selectOption(option.id));
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            // Update question navigation
+            updateQuestionNavigation();
+            
+            // Update buttons
+            document.getElementById('prev-btn').disabled = index === 0;
+            document.getElementById('next-btn').style.display = index === currentQuiz.questions.length - 1 ? 'none' : 'inline-block';
+            document.getElementById('submit-btn').style.display = index === currentQuiz.questions.length - 1 ? 'inline-block' : 'none';
+        }
+
+        // Select an option
+        function selectOption(optionId) {
+            userAnswers[currentQuestionIndex] = optionId;
+            
+            // Update UI
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Update question navigation
+            updateQuestionNavigation();
+        }
+
+        // Navigate to previous question
+        function goToPreviousQuestion() {
+            if (currentQuestionIndex > 0) {
+                showQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        // Navigate to next question
+        function goToNextQuestion() {
+            // Mark current question as answered (locked)
+            if (userAnswers[currentQuestionIndex] !== undefined) {
+                answeredQuestions[currentQuestionIndex] = true;
+            }
+            
+            if (currentQuestionIndex < currentQuiz.questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            } else {
+                submitQuiz();
+            }
+        }
+
+        // Skip current question
+        function skipQuestion() {
+            userAnswers[currentQuestionIndex] = 'skipped';
+            updateQuestionNavigation();
+            
+            if (currentQuestionIndex < currentQuiz.questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            } else {
+                submitQuiz();
+            }
+        }
+
+        // Go to specific question
+        function goToQuestion(index) {
+            showQuestion(index);
+        }
+
+        // Update question navigation
+        function updateQuestionNavigation() {
+            document.querySelectorAll('.question-number').forEach((number, index) => {
+                number.classList.remove('current', 'answered', 'skipped');
+                
+                if (index === currentQuestionIndex) {
+                    number.classList.add('current');
+                } else if (userAnswers[index] !== undefined && userAnswers[index] !== 'skipped') {
+                    number.classList.add('answered');
+                } else if (userAnswers[index] === 'skipped') {
+                    number.classList.add('skipped');
+                }
+            });
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+            const answeredCount = Object.keys(userAnswers).filter(key => userAnswers[key] !== undefined).length;
+            const progress = (answeredCount / currentQuiz.questions.length) * 100;
+            document.getElementById('quiz-progress').style.width = `${progress}%`;
+        }
+
+        // Start quiz timer
+        function startTimer() {
+            updateTimerDisplay();
+            
+            quizTimer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(quizTimer);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        // Update timer display
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            
+            // Add warning when time is running low
+            if (timeLeft <= 300) { // 5 minutes
+                document.getElementById('timer').classList.add('pulse');
+                document.getElementById('timer').style.color = '#e74c3c';
+            }
+        }
+
+        // Submit quiz
+        function submitQuiz() {
+            clearInterval(quizTimer);
+            
+            // Calculate score
+            let correct = 0;
+            let incorrect = 0;
+            let skipped = 0;
+            
+            currentQuiz.questions.forEach((question, index) => {
+                if (userAnswers[index] === 'skipped') {
+                    skipped++;
+                } else if (userAnswers[index] === question.options.find(opt => opt.isCorrect).id) {
+                    correct++;
+                } else {
+                    incorrect++;
+                }
+            });
+            
+            // Save to leaderboard
+            saveToLeaderboard(correct, currentQuiz.questions.length);
+            
+            // Show summary
+            showQuizSummary(correct, incorrect, skipped);
+        }
+
+        // Save quiz result to leaderboard
+        function saveToLeaderboard(correct, total) {
+            const percentage = Math.round((correct / total) * 100);
+            
+            // Get existing leaderboard data
+            let leaderboardData = JSON.parse(localStorage.getItem('zoologyLeaderboard')) || [];
+            
+            // Add new entry
+            leaderboardData.push({
+                userName: currentUser ? currentUser.name : 'Anonymous',
+                quizTitle: currentQuiz.title,
+                score: correct,
+                totalQuestions: total,
+                percentage: percentage,
+                date: new Date().toISOString()
+            });
+            
+            // Save back to localStorage
+            localStorage.setItem('zoologyLeaderboard', JSON.stringify(leaderboardData));
+            
+            // Update leaderboard if it's currently visible
+            if (leaderboardSection.style.display === 'block') {
+                renderLeaderboard();
+            }
+        }
+
+        // Show quiz summary
+        function showQuizSummary(correct, incorrect, skipped) {
+            const totalQuestions = currentQuiz.questions.length;
+            const percentage = Math.round((correct / totalQuestions) * 100);
+            
+            document.getElementById('final-score').textContent = `${correct}/${totalQuestions}`;
+            document.getElementById('final-percentage').textContent = `${percentage}%`;
+            document.getElementById('correct-count').textContent = correct;
+            document.getElementById('incorrect-count').textContent = incorrect;
+            document.getElementById('skipped-count').textContent = skipped;
+            
+            // Set feedback based on score
+            let feedback = "";
+            
+            if (percentage >= 90) {
+                feedback = "Excellent! You have mastered this topic!";
+            } else if (percentage >= 70) {
+                feedback = "Good job! You have a solid understanding of this topic.";
+            } else if (percentage >= 50) {
+                feedback = "Not bad! You have some knowledge but could use more practice.";
+            } else {
+                feedback = "Keep studying! Review the material and try again.";
+            }
+            
+            document.getElementById('quiz-feedback').textContent = feedback;
+            
+            // Show summary and hide quiz content
+            document.querySelector('.quiz-body').style.display = 'none';
+            document.getElementById('quiz-summary').style.display = 'block';
+        }
+
+        // Show quiz review
+        function showQuizReview() {
+            reviewQuestionsContainer.innerHTML = '';
+            
+            currentQuiz.questions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const correctOption = question.options.find(opt => opt.isCorrect);
+                const isCorrect = userAnswer === correctOption.id;
+                
+                const reviewQuestion = document.createElement('div');
+                reviewQuestion.className = 'review-question';
+                
+                let status = 'skipped';
+                let statusText = 'Skipped';
+                
+                if (userAnswer && userAnswer !== 'skipped') {
+                    status = isCorrect ? 'correct' : 'incorrect';
+                    statusText = isCorrect ? 'Correct' : 'Incorrect';
+                }
+                
+                let optionsHTML = '';
+                question.options.forEach((option) => {
+                    let optionClass = '';
+                    if (option.isCorrect) optionClass = 'correct';
+                    else if (userAnswer === option.id && !option.isCorrect) optionClass = 'incorrect';
+                    else if (userAnswer === option.id) optionClass = 'selected';
+                    
+                    optionsHTML += `
+                        <div class="option ${optionClass}">
+                            <div class="option-label">${option.id.toUpperCase()}</div>
+                            <div class="option-text">${option.text}</div>
+                        </div>
+                    `;
+                });
+                
+                reviewQuestion.innerHTML = `
+                    <div class="review-question-header">
+                        <div class="review-question-number">Question ${index + 1}</div>
+                        <div class="review-question-status ${status}">${statusText}</div>
+                    </div>
+                    <div class="review-question-text">${question.text}</div>
+                    <div class="review-options">
+                        ${optionsHTML}
+                    </div>
+                    <div class="review-explanation">
+                        <strong>Explanation:</strong> ${question.explanation}
+                    </div>
+                `;
+                
+                reviewQuestionsContainer.appendChild(reviewQuestion);
+            });
+            
+            // Switch to review view
+            document.getElementById('quiz-summary').style.display = 'none';
+            quizReview.classList.add('active');
+        }
+
+        // User signup function
+        function handleUserSignup(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+            
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+            
+            // Get existing users
+            const users = JSON.parse(localStorage.getItem('zoologyUsers')) || {};
+            
+            // Check if user already exists
+            if (users[email]) {
+                alert('An account with this email already exists. Please login instead.');
+                return;
+            }
+            
+            // Create new user
+            users[email] = {
+                name: name,
+                email: email,
+                password: password
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('zoologyUsers', JSON.stringify(users));
+            
+            // Show success message and redirect to login
+            alert('Account created successfully! Please login with your credentials.');
+            signupModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+            
+            // Reset form
+            document.getElementById('signupForm').reset();
+        }
+
+        // User login function
+        function handleUserLogin(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Get existing users
+            const users = JSON.parse(localStorage.getItem('zoologyUsers')) || {};
+            
+            // Check if user exists and password matches
+            if (users[email] && users[email].password === password) {
+                currentUser = users[email];
+                
+                // Update UI for logged in user
+                loginBtn.textContent = `Welcome, ${currentUser.name.split(' ')[0]}`;
+                loginBtn.disabled = true;
+                
+                // Close modal
+                loginModal.style.display = 'none';
+                
+                // Reset form
+                document.getElementById('loginForm').reset();
+                
+                alert(`Welcome back, ${currentUser.name}!`);
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        }
+
+        // Admin login functions
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('admin-username').value;
+            const password = document.getElementById('admin-password').value;
+            const role = document.getElementById('admin-role').value;
+            
+            // Check credentials
+            if (users[role] && users[role].username === username && users[role].password === password) {
+                currentUser = users[role];
+                adminName.textContent = currentUser.name;
+                adminWelcome.textContent = `Welcome, ${currentUser.name}!`;
+                
+                // Close modal and show admin panel
+                adminLoginModal.style.display = 'none';
+                adminPanel.style.display = 'flex';
+                document.querySelector('header').style.display = 'none';
+                document.querySelector('footer').style.display = 'none';
+                document.querySelectorAll('.section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                quizPage.style.display = 'none';
+                
+                // Show appropriate tabs based on role
+                if (currentUser.role !== 'admin') {
+                    document.querySelector('.admin-nav li[data-tab="user-management"]').style.display = 'none';
+                    document.querySelector('.admin-nav li[data-tab="analytics"]').style.display = 'none';
+                }
+                
+                // Load quiz management if subadmin
+                if (currentUser.role.startsWith('subadmin')) {
+                    switchAdminTab('quiz-management');
+                }
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+
+        function handleAdminLogout() {
+            currentUser = null;
+            adminPanel.style.display = 'none';
+            document.querySelector('header').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+            document.getElementById('home').classList.add('active-section');
+            document.getElementById('home').style.display = 'block';
+            
+            // Reset admin nav
+            document.querySelectorAll('.admin-nav li').forEach(li => {
+                li.style.display = 'block';
+            });
+        }
+
+        function switchAdminTab(tabId) {
+            // Update active tab
+            adminTabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.tab === tabId) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            // Show active tab content
+            adminTabContents.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.id === tabId) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            // Load tab-specific content
+            if (tabId === 'quiz-management') {
+                loadQuizManagement();
+            }
+        }
+
+        function loadQuizManagement() {
+            // Load existing quizzes
+            renderAdminQuizzes();
+            
+            // Set up quiz form
+            setupQuizForm();
+        }
+
+        function setupQuizForm() {
+            questionsContainer.innerHTML = '';
+            
+            // Add first question form by default
+            addQuestionForm();
+        }
+
+        function addQuestionForm() {
+            const questionCount = document.querySelectorAll('.question-form').length;
+            const questionForm = document.createElement('div');
+            questionForm.className = 'question-form';
+            questionForm.innerHTML = `
+                <div class="question-header">
+                    <div class="question-number">Question ${questionCount + 1}</div>
+                    <button type="button" class="remove-question">Remove</button>
+                </div>
+                <div class="form-group">
+                    <label>Question Text</label>
+                    <textarea class="form-control question-text" rows="3" placeholder="Enter your question here"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Options</label>
+                    <div class="options-container">
+                        <div class="option-row">
+                            <input type="radio" name="correct-${questionCount}" value="0" checked>
+                            <input type="text" class="form-control option-text" placeholder="Option A">
+                        </div>
+                        <div class="option-row">
+                            <input type="radio" name="correct-${questionCount}" value="1">
+                            <input type="text" class="form-control option-text" placeholder="Option B">
+                        </div>
+                        <div class="option-row">
+                            <input type="radio" name="correct-${questionCount}" value="2">
+                            <input type="text" class="form-control option-text" placeholder="Option C">
+                        </div>
+                        <div class="option-row">
+                            <input type="radio" name="correct-${questionCount}" value="3">
+                            <input type="text" class="form-control option-text" placeholder="Option D">
+                        </div>
+                    </div>
+                    <button type="button" class="add-option-btn">Add Option</button>
+                </div>
+                <div class="form-group">
+                    <label>Explanation</label>
+                    <textarea class="form-control explanation" rows="2" placeholder="Explanation for the correct answer"></textarea>
+                </div>
+            `;
+            
+            questionsContainer.appendChild(questionForm);
+            
+            // Add event listeners
+            questionForm.querySelector('.remove-question').addEventListener('click', function() {
+                if (document.querySelectorAll('.question-form').length > 1) {
+                    questionForm.remove();
+                    updateQuestionNumbers();
+                } else {
+                    alert('You need at least one question for the quiz.');
+                }
+            });
+            
+            questionForm.querySelector('.add-option-btn').addEventListener('click', function() {
+                const optionsContainer = questionForm.querySelector('.options-container');
+                const optionCount = optionsContainer.querySelectorAll('.option-row').length;
+                const optionRow = document.createElement('div');
+                optionRow.className = 'option-row';
+                optionRow.innerHTML = `
+                    <input type="radio" name="correct-${questionCount}" value="${optionCount}">
+                    <input type="text" class="form-control option-text" placeholder="Option ${String.fromCharCode(65 + optionCount)}">
+                `;
+                optionsContainer.appendChild(optionRow);
+            });
+        }
+
+        function updateQuestionNumbers() {
+            document.querySelectorAll('.question-form').forEach((form, index) => {
+                form.querySelector('.question-number').textContent = `Question ${index + 1}`;
+            });
+        }
+
+        function saveQuiz() {
+            const title = document.getElementById('quiz-title-input').value;
+            const description = document.getElementById('quiz-description').value;
+            const category = document.getElementById('quiz-category').value;
+            const timeLimit = parseInt(document.getElementById('quiz-time').value);
+            
+            if (!title || !description) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            const questionForms = document.querySelectorAll('.question-form');
+            if (questionForms.length === 0) {
+                alert('Please add at least one question to the quiz.');
+                return;
+            }
+            
+            const questions = [];
+            
+            questionForms.forEach((form, index) => {
+                const questionText = form.querySelector('.question-text').value;
+                const optionInputs = form.querySelectorAll('.option-text');
+                const correctIndex = parseInt(form.querySelector('input[type="radio"]:checked').value);
+                const explanation = form.querySelector('.explanation').value;
+                
+                if (!questionText) {
+                    alert(`Please fill in the text for question ${index + 1}.`);
+                    return;
+                }
+                
+                const options = [];
+                optionInputs.forEach((input, optIndex) => {
+                    if (!input.value) {
+                        alert(`Please fill in all options for question ${index + 1}.`);
+                        return;
+                    }
+                    
+                    options.push({
+                        id: String.fromCharCode(97 + optIndex), // a, b, c, d, etc.
+                        text: input.value,
+                        isCorrect: optIndex === correctIndex
+                    });
+                });
+                
+                questions.push({
+                    id: index + 1,
+                    text: questionText,
+                    options: options,
+                    explanation: explanation || 'No explanation provided.'
+                });
+            });
+            
+            // Create new quiz object
+            const newQuiz = {
+                id: quizzes.length > 0 ? Math.max(...quizzes.map(q => q.id)) + 1 : 1,
+                title: title,
+                description: description,
+                category: category,
+                timeLimit: timeLimit,
+                questions: questions
+            };
+            
+            // Add to quizzes array
+            quizzes.push(newQuiz);
+            
+            // Save to localStorage
+            localStorage.setItem('zoologyQuizzes', JSON.stringify(quizzes));
+            
+            // Update UI
+            renderAdminQuizzes();
+            updateAdminDashboard();
+            
+            // Reset form
+            document.getElementById('quiz-title-input').value = '';
+            document.getElementById('quiz-description').value = '';
+            questionsContainer.innerHTML = '';
+            addQuestionForm();
+            
+            alert('Quiz saved successfully!');
+        }
+
+        function renderAdminQuizzes() {
+            quizzesList.innerHTML = '';
+            
+            if (quizzes.length === 0) {
+                quizzesList.innerHTML = '<p>No quizzes available.</p>';
+                return;
+            }
+            
+            quizzes.forEach(quiz => {
+                const quizItem = document.createElement('div');
+                quizItem.className = 'quiz-item';
+                quizItem.innerHTML = `
+                    <div>
+                        <h4>${quiz.title}</h4>
+                        <p>${quiz.description}</p>
+                        <small>${quiz.questions.length} questions | ${quiz.timeLimit} minutes | ${quiz.category.toUpperCase()} Level</small>
+                    </div>
+                    <div class="quiz-actions">
+                        <button class="edit-quiz" data-quiz-id="${quiz.id}">Edit</button>
+                        <button class="delete-quiz" data-quiz-id="${quiz.id}">Delete</button>
+                    </div>
+                `;
+                quizzesList.appendChild(quizItem);
+            });
+            
+            // Add event listeners for edit and delete buttons
+            document.querySelectorAll('.edit-quiz').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const quizId = parseInt(this.dataset.quizId);
+                    editQuiz(quizId);
+                });
+            });
+            
+            document.querySelectorAll('.delete-quiz').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const quizId = parseInt(this.dataset.quizId);
+                    deleteQuiz(quizId);
+                });
+            });
+        }
+
+        function editQuiz(quizId) {
+            // Find the quiz
+            const quiz = quizzes.find(q => q.id === quizId);
+            if (!quiz) return;
+            
+            // Populate the form with quiz data
+            document.getElementById('quiz-title-input').value = quiz.title;
+            document.getElementById('quiz-description').value = quiz.description;
+            document.getElementById('quiz-category').value = quiz.category;
+            document.getElementById('quiz-time').value = quiz.timeLimit;
+            
+            // Clear existing questions and add the quiz questions
+            questionsContainer.innerHTML = '';
+            
+            quiz.questions.forEach((question, index) => {
+                const questionForm = document.createElement('div');
+                questionForm.className = 'question-form';
+                questionForm.innerHTML = `
+                    <div class="question-header">
+                        <div class="question-number">Question ${index + 1}</div>
+                        <button type="button" class="remove-question">Remove</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Question Text</label>
+                        <textarea class="form-control question-text" rows="3">${question.text}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Options</label>
+                        <div class="options-container">
+                            ${question.options.map((option, optIndex) => `
+                                <div class="option-row">
+                                    <input type="radio" name="correct-${index}" value="${optIndex}" ${option.isCorrect ? 'checked' : ''}>
+                                    <input type="text" class="form-control option-text" value="${option.text}">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button type="button" class="add-option-btn">Add Option</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Explanation</label>
+                        <textarea class="form-control explanation" rows="2">${question.explanation}</textarea>
+                    </div>
+                `;
+                
+                questionsContainer.appendChild(questionForm);
+                
+                // Add event listeners
+                questionForm.querySelector('.remove-question').addEventListener('click', function() {
+                    if (document.querySelectorAll('.question-form').length > 1) {
+                        questionForm.remove();
+                        updateQuestionNumbers();
+                    } else {
+                        alert('You need at least one question for the quiz.');
+                    }
+                });
+                
+                questionForm.querySelector('.add-option-btn').addEventListener('click', function() {
+                    const optionsContainer = questionForm.querySelector('.options-container');
+                    const optionCount = optionsContainer.querySelectorAll('.option-row').length;
+                    const optionRow = document.createElement('div');
+                    optionRow.className = 'option-row';
+                    optionRow.innerHTML = `
+                        <input type="radio" name="correct-${index}" value="${optionCount}">
+                        <input type="text" class="form-control option-text" placeholder="Option ${String.fromCharCode(65 + optionCount)}">
+                    `;
+                    optionsContainer.appendChild(optionRow);
+                });
+            });
+            
+            // Change save button to update
+            saveQuizBtn.textContent = 'Update Quiz';
+            saveQuizBtn.onclick = function() {
+                updateQuiz(quizId);
+            };
+            
+            // Scroll to form
+            document.querySelector('.quiz-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateQuiz(quizId) {
+            const title = document.getElementById('quiz-title-input').value;
+            const description = document.getElementById('quiz-description').value;
+            const category = document.getElementById('quiz-category').value;
+            const timeLimit = parseInt(document.getElementById('quiz-time').value);
+            
+            if (!title || !description) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            const questionForms = document.querySelectorAll('.question-form');
+            if (questionForms.length === 0) {
+                alert('Please add at least one question to the quiz.');
+                return;
+            }
+            
+            const questions = [];
+            
+            questionForms.forEach((form, index) => {
+                const questionText = form.querySelector('.question-text').value;
+                const optionInputs = form.querySelectorAll('.option-text');
+                const correctIndex = parseInt(form.querySelector('input[type="radio"]:checked').value);
+                const explanation = form.querySelector('.explanation').value;
+                
+                if (!questionText) {
+                    alert(`Please fill in the text for question ${index + 1}.`);
+                    return;
+                }
+                
+                const options = [];
+                optionInputs.forEach((input, optIndex) => {
+                    if (!input.value) {
+                        alert(`Please fill in all options for question ${index + 1}.`);
+                        return;
+                    }
+                    
+                    options.push({
+                        id: String.fromCharCode(97 + optIndex), // a, b, c, d, etc.
+                        text: input.value,
+                        isCorrect: optIndex === correctIndex
+                    });
+                });
+                
+                questions.push({
+                    id: index + 1,
+                    text: questionText,
+                    options: options,
+                    explanation: explanation || 'No explanation provided.'
+                });
+            });
+            
+            // Find and update the quiz
+            const quizIndex = quizzes.findIndex(q => q.id === quizId);
+            if (quizIndex !== -1) {
+                quizzes[quizIndex] = {
+                    id: quizId,
+                    title: title,
+                    description: description,
+                    category: category,
+                    timeLimit: timeLimit,
+                    questions: questions
+                };
+                
+                // Save to localStorage
+                localStorage.setItem('zoologyQuizzes', JSON.stringify(quizzes));
+                
+                // Update UI
+                renderAdminQuizzes();
+                
+                // Reset form and button
+                document.getElementById('quiz-title-input').value = '';
+                document.getElementById('quiz-description').value = '';
+                questionsContainer.innerHTML = '';
+                addQuestionForm();
+                saveQuizBtn.textContent = 'Save Quiz';
+                saveQuizBtn.onclick = saveQuiz;
+                
+                alert('Quiz updated successfully!');
+            }
+        }
+
+        function deleteQuiz(quizId) {
+            if (confirm('Are you sure you want to delete this quiz? This action cannot be undone.')) {
+                // Remove the quiz
+                quizzes = quizzes.filter(q => q.id !== quizId);
+                
+                // Save to localStorage
+                localStorage.setItem('zoologyQuizzes', JSON.stringify(quizzes));
+                
+                // Update UI
+                renderAdminQuizzes();
+                updateAdminDashboard();
+                
+                alert('Quiz deleted successfully!');
+            }
+        }
+
+        function updateAdminDashboard() {
+            totalQuizzesCount.textContent = quizzes.length;
+            totalUsersCount.textContent = Object.keys(users).length;
+            
+            // Calculate total questions across all quizzes
+            const totalQuestions = quizzes.reduce((total, quiz) => total + quiz.questions.length, 0);
+            quizAttemptsCount.textContent = totalQuestions; // This would normally come from user data
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
+[file content end]
